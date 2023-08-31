@@ -12,6 +12,10 @@
 		F8DF082A2A9DDD0E003F65BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8DF08292A9DDD0E003F65BC /* Assets.xcassets */; };
 		F8DF082D2A9DDD0E003F65BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8DF082C2A9DDD0E003F65BC /* Preview Assets.xcassets */; };
 		F8DF08352A9DDD5C003F65BC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DF08342A9DDD5C003F65BC /* GameScene.swift */; };
+		F8DF08382A9EDC98003F65BC /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DF08372A9EDC98003F65BC /* SpriteComponent.swift */; };
+		F8DF083B2A9F44FE003F65BC /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DF083A2A9F44FE003F65BC /* PlayerEntity.swift */; };
+		F8DF083D2A9F4519003F65BC /* HandsOnInstructions in Resources */ = {isa = PBXBuildFile; fileRef = F8DF083C2A9F4519003F65BC /* HandsOnInstructions */; };
+		F8DF083F2AA044F2003F65BC /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DF083E2AA044F2003F65BC /* EntityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		F8DF082C2A9DDD0E003F65BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F8DF082E2A9DDD0E003F65BC /* ECSExampleMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ECSExampleMac.entitlements; sourceTree = "<group>"; };
 		F8DF08342A9DDD5C003F65BC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F8DF08372A9EDC98003F65BC /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
+		F8DF083A2A9F44FE003F65BC /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
+		F8DF083C2A9F4519003F65BC /* HandsOnInstructions */ = {isa = PBXFileReference; lastKnownFileType = text; path = HandsOnInstructions; sourceTree = "<group>"; };
+		F8DF083E2AA044F2003F65BC /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 				F8DF08252A9DDD0D003F65BC /* ECSExampleMacApp.swift */,
 				F8DF08272A9DDD0D003F65BC /* ContentView.swift */,
 				F8DF08342A9DDD5C003F65BC /* GameScene.swift */,
+				F8DF083E2AA044F2003F65BC /* EntityManager.swift */,
+				F8DF08392A9F2F21003F65BC /* Entity */,
+				F8DF08362A9EDC1F003F65BC /* Component */,
 				F8DF08292A9DDD0E003F65BC /* Assets.xcassets */,
 				F8DF082E2A9DDD0E003F65BC /* ECSExampleMac.entitlements */,
 				F8DF082B2A9DDD0E003F65BC /* Preview Content */,
+				F8DF083C2A9F4519003F65BC /* HandsOnInstructions */,
 			);
 			path = ECSExampleMac;
 			sourceTree = "<group>";
@@ -70,6 +82,22 @@
 				F8DF082C2A9DDD0E003F65BC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F8DF08362A9EDC1F003F65BC /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F8DF08372A9EDC98003F65BC /* SpriteComponent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		F8DF08392A9F2F21003F65BC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F8DF083A2A9F44FE003F65BC /* PlayerEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8DF083D2A9F4519003F65BC /* HandsOnInstructions in Resources */,
 				F8DF082D2A9DDD0E003F65BC /* Preview Assets.xcassets in Resources */,
 				F8DF082A2A9DDD0E003F65BC /* Assets.xcassets in Resources */,
 			);
@@ -142,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8DF083B2A9F44FE003F65BC /* PlayerEntity.swift in Sources */,
 				F8DF08352A9DDD5C003F65BC /* GameScene.swift in Sources */,
+				F8DF083F2AA044F2003F65BC /* EntityManager.swift in Sources */,
 				F8DF08282A9DDD0D003F65BC /* ContentView.swift in Sources */,
+				F8DF08382A9EDC98003F65BC /* SpriteComponent.swift in Sources */,
 				F8DF08262A9DDD0D003F65BC /* ECSExampleMacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

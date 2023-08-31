@@ -10,11 +10,17 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    var entityManager: EntityManager!
+    
     override func didMove(to view: SKView) {
-        let node = SKShapeNode(rectOf: CGSize(width: 20, height: 20))
-        node.fillColor = .green
-        node.position = CGPoint(x: 400, y: 200)
-        addChild(node)
+        entityManager = EntityManager(scene: self)
+        
+        let playerEntity = PlayerEntity()
+        if let spriteComponent = playerEntity.component(ofType: SpriteComponent.self) {
+            spriteComponent.node.position = CGPoint(x: 400, y: 200)
+        }
+        entityManager.add(entity: playerEntity)
     }
+    
     
 }

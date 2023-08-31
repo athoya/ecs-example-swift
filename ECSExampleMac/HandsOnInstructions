@@ -1,0 +1,11 @@
+
+Chapter 1 - Create Component and Entity
+1. Create a new class, SpriteComponent, which inherit GKSKNodeComponent. This is our first component
+2. Create a new class, PlayerEntity, which inherit GKEntity. This is our first component
+3. In PlayerEntity, add your component by creating new variable with SpriteComponent value. Since our component needs node, we should define node first
+4. Add component to the entity in the init function of the PlayerEntity
+5. Create EntityManager to manage all entity created by our game
+6. Create variable scene, collection of all entities to store our variables
+7. Create an add function to add entitiy, and check if the entity has spriteComponent, so we can add to the scene
+8. Add player entity to the GameScene
+9. Run the game and check if the have player object displayed
