@@ -16,6 +16,10 @@
 		F8DF083B2A9F44FE003F65BC /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DF083A2A9F44FE003F65BC /* PlayerEntity.swift */; };
 		F8DF083D2A9F4519003F65BC /* HandsOnInstructions in Resources */ = {isa = PBXBuildFile; fileRef = F8DF083C2A9F4519003F65BC /* HandsOnInstructions */; };
 		F8DF083F2AA044F2003F65BC /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DF083E2AA044F2003F65BC /* EntityManager.swift */; };
+		F8DF08412AA179DC003F65BC /* EnemyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DF08402AA179DC003F65BC /* EnemyEntity.swift */; };
+		F8DF08432AA18158003F65BC /* EnemyAgentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DF08422AA18158003F65BC /* EnemyAgentComponent.swift */; };
+		F8DF08452AA18850003F65BC /* SeekingBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DF08442AA18850003F65BC /* SeekingBehavior.swift */; };
+		F8DF08482AA19F66003F65BC /* PlayerAgentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DF08472AA19F66003F65BC /* PlayerAgentComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		F8DF083A2A9F44FE003F65BC /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
 		F8DF083C2A9F4519003F65BC /* HandsOnInstructions */ = {isa = PBXFileReference; lastKnownFileType = text; path = HandsOnInstructions; sourceTree = "<group>"; };
 		F8DF083E2AA044F2003F65BC /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
+		F8DF08402AA179DC003F65BC /* EnemyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyEntity.swift; sourceTree = "<group>"; };
+		F8DF08422AA18158003F65BC /* EnemyAgentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyAgentComponent.swift; sourceTree = "<group>"; };
+		F8DF08442AA18850003F65BC /* SeekingBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekingBehavior.swift; sourceTree = "<group>"; };
+		F8DF08472AA19F66003F65BC /* PlayerAgentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAgentComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 				F8DF08272A9DDD0D003F65BC /* ContentView.swift */,
 				F8DF08342A9DDD5C003F65BC /* GameScene.swift */,
 				F8DF083E2AA044F2003F65BC /* EntityManager.swift */,
+				F8DF08462AA1899E003F65BC /* Behavior */,
 				F8DF08392A9F2F21003F65BC /* Entity */,
 				F8DF08362A9EDC1F003F65BC /* Component */,
 				F8DF08292A9DDD0E003F65BC /* Assets.xcassets */,
@@ -88,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				F8DF08372A9EDC98003F65BC /* SpriteComponent.swift */,
+				F8DF08422AA18158003F65BC /* EnemyAgentComponent.swift */,
+				F8DF08472AA19F66003F65BC /* PlayerAgentComponent.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -96,8 +107,17 @@
 			isa = PBXGroup;
 			children = (
 				F8DF083A2A9F44FE003F65BC /* PlayerEntity.swift */,
+				F8DF08402AA179DC003F65BC /* EnemyEntity.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		F8DF08462AA1899E003F65BC /* Behavior */ = {
+			isa = PBXGroup;
+			children = (
+				F8DF08442AA18850003F65BC /* SeekingBehavior.swift */,
+			);
+			path = Behavior;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,11 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8DF08432AA18158003F65BC /* EnemyAgentComponent.swift in Sources */,
 				F8DF083B2A9F44FE003F65BC /* PlayerEntity.swift in Sources */,
 				F8DF08352A9DDD5C003F65BC /* GameScene.swift in Sources */,
 				F8DF083F2AA044F2003F65BC /* EntityManager.swift in Sources */,
+				F8DF08412AA179DC003F65BC /* EnemyEntity.swift in Sources */,
 				F8DF08282A9DDD0D003F65BC /* ContentView.swift in Sources */,
+				F8DF08482AA19F66003F65BC /* PlayerAgentComponent.swift in Sources */,
 				F8DF08382A9EDC98003F65BC /* SpriteComponent.swift in Sources */,
+				F8DF08452AA18850003F65BC /* SeekingBehavior.swift in Sources */,
 				F8DF08262A9DDD0D003F65BC /* ECSExampleMacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

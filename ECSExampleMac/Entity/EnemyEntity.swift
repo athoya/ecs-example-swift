@@ -8,20 +8,26 @@
 import Foundation
 import GameplayKit
 
-class PlayerEntity: GKEntity {
+class EnemyEntity: GKEntity {
     
-    override init() {
+    let entityManager: EntityManager!
+    
+    init(position: CGPoint, entityManager: EntityManager) {
+        self.entityManager = entityManager
         super.init()
-        let node = SKShapeNode(rectOf: CGSize(width: 20, height: 20))
-        node.fillColor = .blue
+        
+        let node = SKShapeNode(circleOfRadius: 10)
+        node.fillColor = .red
+        node.position = position
         let spriteComponent = SpriteComponent(sprite: node)
         
-        let agentComponent = PlayerAgentComponent(speed: 1, radius: 10, maxSpeed: 100, maxAcceleration: 100)
+        let agentComponent = EnemyAgentComponent(speed: 1, radius: 10, maxSpeed: 1000, maxAcceleration: 1000, entityManager: entityManager)
         agentComponent.delegate = spriteComponent
         
         addComponent(spriteComponent)
         addComponent(agentComponent)
     }
+
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -9,3 +9,18 @@ Chapter 1 - Create Component and Entity
 7. Create an add function to add entitiy, and check if the entity has spriteComponent, so we can add to the scene
 8. Add player entity to the GameScene
 9. Run the game and check if the have player object displayed
+
+Chapter 2 - Create EnemyEntity
+1. Let's create an EnemyEntity class. This class similar with the player entity
+2. in the same way, let add enemy entity into Game scene. Change the player entity and put enemy entity side by side
+
+Chapter 3 - Add Agent
+1. Let's try create EnemyAgentComponent to follow player. This class should conform GKAgent2D. Since agent conform GKComponent, we don't need to include GKComponent
+2. After we create agent, we can create behavior to seek player
+3. Now, we can add agent to our enemy and player entity. Then, make our delegate. Since GKSKNodeComponent conform GKAgent delgate, we can assign agent delegate to spriteComponent.
+4. We can implement the agent delegate in sprite component. In will update, we make the agent position same with the node. In did update, we make the node position same with agent.
+5. We improve our enemy entity, make our enemy seek player
+6. Behavior update over time, so we need to update the agent behavior over time. Let create a system to track update in EntityManager
+7. Lets add update function in our agent to update their behavior. Since we need reference for playerAgent, we create player agent, then add function to get playerEntity in entityManager
+8. 
+9. 

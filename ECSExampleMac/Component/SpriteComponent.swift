@@ -23,4 +23,15 @@ class SpriteComponent: GKSKNodeComponent {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func agentWillUpdate(_ agent: GKAgent) {
+        if let agent2d = agent as? GKAgent2D {
+            agent2d.position = vector_float2(x: Float(node.position.x), y: Float(node.position.y))
+        }
+    }
+    
+    override func agentDidUpdate(_ agent: GKAgent) {
+        if let agent2d = agent as? GKAgent2D {
+            node.position = CGPoint(x: Double(agent2d.position.x), y: Double(agent2d.position.y))
+        }
+    }
 }
